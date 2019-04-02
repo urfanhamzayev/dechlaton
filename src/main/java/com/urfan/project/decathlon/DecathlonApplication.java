@@ -29,7 +29,7 @@ public class DecathlonApplication {
 		 String directory = "competeter.xml";
 		ClassLoader classLoader = DecathlonApplication.class.getClassLoader();
 
-		File inputDataFile =   new File(classLoader.getResource("resultTestMock.csv").getFile()); //new File(args[0]);
+		File inputDataFile =   new File(classLoader.getResource("resultTestMock.csv").getFile());
 
 		List<List<String>> result = new CSVReader().loadFile(inputDataFile.getAbsolutePath());
 		List<Athlete> calculatedData = new AthletesParser().parseAthletes(result);
